@@ -108,8 +108,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/aospa/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
     vendor/aospa/target/config/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
-$(call inherit-product, external/google-fonts/lato/fonts.mk)
-
 # Gestures
 PRODUCT_PACKAGES += \
     vendor.aospa.power-service
@@ -277,10 +275,6 @@ PRODUCT_PACKAGES += \
     libtextclassifier_annotator_universal_model \
     libtextclassifier_actions_suggestions_universal_model \
     libtextclassifier_lang_id_model
-
-# Volume panel dialog - SystemUI
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    sys.fflag.override.settings_volume_panel_in_systemui=true
 
 # WiFi
 PRODUCT_PACKAGES += \
